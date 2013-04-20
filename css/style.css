@@ -485,7 +485,7 @@ p {
 }
 
 /* line 32, ../scss/style.scss */
-.b-sizing, body, .d-center *, article, .block, form input, form textarea, #myBtn {
+.b-sizing, body, .d-center *, article, .block, form input, form textarea, #myBtn, .b-mod, .b-text {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -601,7 +601,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'AmasisMTStd', Geneva, sans-serif;
   font-weight: normal;
-  color: #c02126;
+  color: #093b6b;
 }
 
 /* line 245, ../scss/style.scss */
@@ -635,7 +635,7 @@ header * {
 
 /* line 279, ../scss/style.scss */
 header img {
-  width: 4em;
+  width: 150px;
   margin: 1.625em;
 }
 
@@ -703,7 +703,7 @@ ul.color {
 
 /* line 355, ../scss/style.scss */
 .color > li:nth-child(1) {
-  background-color: #c02126;
+  background-color: #093b6b;
 }
 
 /* line 359, ../scss/style.scss */
@@ -781,7 +781,7 @@ footer {
 
 /* line 431, ../scss/style.scss */
 .main-btn {
-  background-color: #c02126;
+  background-color: #093b6b;
   color: white;
   border: 1px solid #a40000;
   text-shadow: 0 -1px #a40000;
@@ -804,9 +804,9 @@ footer {
   -moz-box-shadow: 0px 1px 2px 0px #cccccc;
   -webkit-box-shadow: 0px 1px 2px 0px #cccccc;
   box-shadow: 0px 1px 2px 0px #cccccc;
-  -moz-box-shadow: inset 0px -1px 0px #c02126;
-  -webkit-box-shadow: inset 0px -1px 0px #c02126;
-  box-shadow: inset 0px -1px 0px #c02126;
+  -moz-box-shadow: inset 0px -1px 0px #093b6b;
+  -webkit-box-shadow: inset 0px -1px 0px #093b6b;
+  box-shadow: inset 0px -1px 0px #093b6b;
 }
 /* line 447, ../scss/style.scss */
 .main-btn:hover {
@@ -847,7 +847,7 @@ footer {
 /* line 475, ../scss/style.scss */
 .quote {
   font-family: 'Open Sans Light', Arial, sans-serif;
-  color: #c02126;
+  color: #093b6b;
   font-size: 2em;
   line-height: 1.7em;
   text-align: center;
@@ -960,41 +960,44 @@ input [type="radio"] {
 
 /* line 639, ../scss/style.scss */
 #wrap {
-  padding-top: 10px;
+  padding: 15px;
+  overflow: hidden;
+  display: block;
 }
 
-/* line 643, ../scss/style.scss */
+/* line 645, ../scss/style.scss */
 .name {
   padding: 0px;
   margin: 0px;
-  float: left;
 }
 
-/* line 649, ../scss/style.scss */
+/* line 650, ../scss/style.scss */
 #pImg {
   float: left;
   clear: right;
   margin-right: 10px;
+  border: 1px solid #666666;
+  width: 125px;
 }
 
-/* line 656, ../scss/style.scss */
+/* line 659, ../scss/style.scss */
 .b-container {
   display: block;
   overflow: hidden;
   width: 100%;
 }
 
-/* line 663, ../scss/style.scss */
+/* line 666, ../scss/style.scss */
 .badges img:first-child {
   margin-left: 0px;
 }
 
-/* line 667, ../scss/style.scss */
+/* line 670, ../scss/style.scss */
 .badges > img {
   margin-left: 5px;
 }
 
-/* line 671, ../scss/style.scss */
+/* line 674, ../scss/style.scss */
 .sub-header, .profile-SH {
   margin: 10px 0;
   text-transform: uppercase;
@@ -1003,12 +1006,19 @@ input [type="radio"] {
   font-size: 20px;
 }
 
-/* line 679, ../scss/style.scss */
+/* line 682, ../scss/style.scss */
 .profile-SH {
   text-align: left;
+  padding-top: 15px;
 }
 
-/* line 684, ../scss/style.scss */
+/* line 688, ../scss/style.scss */
+.profile > p {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 693, ../scss/style.scss */
 .playerInfo {
   display: block;
   overflow: hidden;
@@ -1016,48 +1026,101 @@ input [type="radio"] {
   font-size: 20px;
 }
 
-/* line 691, ../scss/style.scss */
+/* line 700, ../scss/style.scss */
 .question {
   float: left;
 }
 
-/* line 695, ../scss/style.scss */
+/* line 704, ../scss/style.scss */
 .answers {
   display: table;
+  margin-bottom: 10px;
+  margin: 0 auto;
 }
-/* line 698, ../scss/style.scss */
+/* line 709, ../scss/style.scss */
 .answers li {
   display: table-cell;
 }
 
-/* line 703, ../scss/style.scss */
+/* line 714, ../scss/style.scss */
 .mc {
-    width: 100px;
-  height: 100px;
-  background: #fc2e5a;
+  background: #093b6b;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+  padding: 10px;
+  margin-right: 10px;
+  color: #ffffff;
+  border: 2px solid #666666;
+  display: inline-block;
 }
-/* line 711, ../scss/style.scss */
- 
-.mc:before {
-  content: "";
-  width: 100%;
-  height: 100%;
+
+/* line 727, ../scss/style.scss */
+.badges {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 733, ../scss/style.scss */
+.badges span:last-child {
+  margin-right: 0;
+}
+
+/* line 737, ../scss/style.scss */
+.b-mod {
+  max-width: 35%;
+  padding: 5px;
+  border: 1px solid #F6F6F6;
   display: block;
-  z-index: -1;
-  position: relative;
-  padding: 15px;
-  background: #ddd;
-  left: -15px;
-  top: -15px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  -webkit-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+  float: left;
+  margin-right: 5px;
+}
+/* line 746, ../scss/style.scss */
+.b-mod img {
+  width: 90px;
+  padding-top: 5px;
+}
+
+/* line 752, ../scss/style.scss */
+.b-color-1 {
+  background-color: #A9DA88;
+}
+
+/* line 756, ../scss/style.scss */
+.b-color {
+  background-color: #62997A;
+}
+
+/* line 760, ../scss/style.scss */
+.b-color-3 {
+  background-color: #72243D;
+}
+
+/* line 764, ../scss/style.scss */
+.b-color {
+  background-color: #670D0F;
+}
+
+/* line 768, ../scss/style.scss */
+.b-color {
+  background-color: #3B0819;
+}
+
+/* line 772, ../scss/style.scss */
+.b-color-2 {
+  background-color: #F36444;
+}
+
+/* line 777, ../scss/style.scss */
+.b-text {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  background-color: #ffffff;
+  padding: 5px;
 }
 
 .mediaObj{
