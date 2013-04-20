@@ -45,7 +45,11 @@ $route['admin'] = "teacher";
 $route['admin/questions'] = "questions";
 $route['admin/questions/create'] = "questions/create";
 $route['admin/questions/edit/(:num)'] = "questions/edit/$1";
+$route['admin/questions/save'] = "questions/save";
 $route['admin/results'] = 'results';
+
+$route['profile'] = 'welcome/profile';
+$route['pop'] = 'welcome/questions';
 
 
 /* End of file routes.php */

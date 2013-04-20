@@ -55,18 +55,26 @@
         <h4>ESPN Search Form</h4>
 <label>
     Sports Theme:
-        <select id="sport">
-            <option value="nba">NBA</option>
+        <select id="sport" onchange="OhMyMath.setSportsTheme();">
+            <option value="nba" selected>NBA</option>
             <option value="wnba">WNBA</option>
+            <!--
             <option value="golf">Golf</option>
-            <option value="NFL">NFL</option>
-            <option value="baseball">Baseball</option>
+            -->
+            <option value="nfl">NFL</option>
+            <option value="mlb">Baseball</option>
         </select>
 </label>
+
+        <label id="team"></label>
+        <label id="player"></label>
+
+        <!--
         <form class="form-search">
             <input type="text" class="input-medium search-query" id="player_name">
             <button type="button" class="btn" onclick="javascript:ESPN.player_search('player_name','espn_result');">Search</button>
         </form>
+        -->
 
         <div id="espn_result">
 
@@ -75,23 +83,32 @@
     <div class="span8">
         <h3>Question Area</h3>
         <div>
-            <form action='save'>
+            <form action='save' method='post'>
+                <input type="hidden" name="sport_theme" id="sport_theme" value="nba" />
+                <input type="hidden" name="headshot" id="headshot" />
+                <input type="hidden" name="playername" id="playername" />
 
-                <textarea placeholder="Question" required="required" rows="5" style="min-width:90%"></textarea>
+                <textarea placeholder="Question" required="required" rows="5" class="input-block-level" id="question" name="question"></textarea>
 
-                <div>
+                <div style="padding-bottom:25px;">
                 <label class="radio inline">
-                    <input type="radio" name="answerType" id="multiple" value="multiple">
+                    <input type="radio" name="answerType" id="multiple" value="multiple" onclick="javascript:OhMyMath.useMultipleChoice();">
                     Multiple Choice
                 </label>
                 <label class="radio inline">
-                    <input type="radio" name="answerType" id="trueFalse" value="trueFalse">
+                    <input type="radio" name="answerType" id="trueFalse" value="trueFalse" onclick="javascript:OhMyMath.useTrueOrFalse();">
                     True / False
                 </label>
                 </div>
 
-                <div id="multipleChoiceAnswers">
+                <div id="multipleChoiceAnswers" style="padding-bottom:25px; display:none;">
+                    <input type="text" placeholder="Answer 1" id="answer1" name="answer1" class="input-block-level"/>
 
+                    <input type="text" placeholder="Answer 2" id="answer2" name="answer2" class="input-block-level"/>
+
+                    <input type="text" placeholder="Answer 3" id="answer3" name="answer3" class="input-block-level"/>
+
+                    <input type="text" placeholder="Answer 4" id="answer4" name="answer4" class="input-block-level"/>
                 </div>
 
 
@@ -115,33 +132,6 @@
 <script src="http://ohmymath.my.phpcloud.com/tmo/js/bootstrap.min.js"></script>
 
 
-<script type="text/javascript">
-    var ESPN = {
-        player_search:function(search_field_id, result_div_id){
-            var name = $('#'+search_field_id).val();
-            var sport = $('#sport').val();
-
-            var url = sport +'/'+name;
-
-
-            ESPN.handleResponse(ESPN.makeRequest(url), result_div_id);
-        },
-        makeRequest:function(url_request){
-            alert('making request to :' + url_request);
-            json = "<table><tr><td>blah</td><td>blah</td></tr></table>";
-            return json;
-        },
-        handleResponse:function(response, display_div_id){
-            $('#' + display_div_id).html(response);
-
-        }
-    };
-
-    var OhMyMath ={
-        useMultipleChoice:function(){},
-        useTrueOrFalse:fumction
-    };
-
-</script>
+<script type="text/javascript" src="http://ohmymath.my.phpcloud.com/tmo/js/OhMyMath.js"></script>
 </body>
 </html>

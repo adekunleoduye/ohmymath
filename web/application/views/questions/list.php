@@ -51,7 +51,18 @@
 
 <div class="container">
 
+    <h2>Questions</h2>
 
+    <table class='table'>
+        <tr><td>Edit</td><td>Question</td></tr>
+        <?php foreach($questions as $question):?>
+        <tr>
+            <td><a href="http://ohmymath.my.phpcloud.com/tmo/questions/edit/<?php echo $question->id ?>">Edit</a></td>
+            <td><?php echo $question->question ?></td>
+        </tr>
+
+        <?php endforeach; ?>
+    </table>
 
 </div> <!-- /container -->
 
