@@ -1,6 +1,4 @@
 atteducationhack
 ================
 
-This is a repository to store the education hack concepts.
-
-
+repository for att education hackathon
