@@ -1059,3 +1059,53 @@ input [type="radio"] {
   -moz-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+
+.mediaObj{
+  margin: .5em;
+  padding: 1em;
+  /*background: #CCCCcC;*/
+  width: 98%;
+}
+
+.dJeter{
+  background: url(../images/baseball.jpg) 85px -25px no-repeat;
+  width: 100%;
+  background-size: 78%;
+ }
+
+.dTaurasi{
+  background: url(../images/nba.jpg) 148px 1px no-repeat;
+  width: 100%;
+  background-size: 57%;
+
+  }
+
+.lJames{
+  background: url(../images/nba.jpg) 148px 1px no-repeat;
+  width: 100%;
+  background-size: 55%;
+
+  }
+
+
+.mediaObj img {
+      width: 16em;
+      /*float: left;*/
+      border: 1px solid black;
+}
+
+/*section .media-obj h1{
+  background: #CCCCcC;
+  float: right;;
+}*/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
